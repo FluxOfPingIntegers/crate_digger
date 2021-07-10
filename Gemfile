@@ -20,10 +20,22 @@ gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+# Use require_all to use utility classes in different folders like web scraping and api interfaces
+gem 'require_all'
+
+# Web scrape
+gem "open-uri"
+gem "net-http"
+gem "nokogiri"
+gem "json"
+
+# Hide keys from github
+gem "dotenv"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
