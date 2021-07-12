@@ -1,0 +1,5 @@
+class Comment < ApplicationRecord
+  validates :content, presence: true
+  validates :user_id, presence: true
+  validates :store_id, presence: true
+end
