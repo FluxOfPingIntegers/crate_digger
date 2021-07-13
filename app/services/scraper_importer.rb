@@ -36,11 +36,19 @@ class ScraperImporter
   byebug    
   end
 
+# this one needs a lot of work
   def self.city_zip_codes(city)
     abb = city.state_abb.downcase
     city_name = city.name.downcase.split(" ").join("-")
   byebug
-    url = URI.parse("#{@@zips_site}#{abb}-#{city_name}.asp")
+#    url = URI.parse("#{@@zips_site}#{abb}-#{city_name}.asp")  <-- it will eventually be this
+    # currently testing with the following:
+    # url = URI.parse("https://www.zip-codes.com/city/va-richmond.asp")
+    zip_response = Net::HTTP.get(url)
+    noko_html = Nokogiri::HTML(zip_response)
+    # currently if I select an element from this table with:
+    # noko_html.css("statTable").children[3].children[0].content
+    # I will get the first zip code as => "Zip Code 23173"
     puts "complete"
   end
 
