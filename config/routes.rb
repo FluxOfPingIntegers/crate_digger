@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  get 'comments/new'
+  get 'comments/create'
+  get 'comments/index'
+  get 'comments/edit'
+  get 'comments/update'
+  get 'comments/destroy'
+  get 'stores/show'
+  get 'cities/index'
+  get 'cities/show'
   get 'session/create'
   get 'session/destroy'
   resources :users
