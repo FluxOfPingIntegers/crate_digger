@@ -81,7 +81,7 @@ GEM
     crass (1.0.6)
     dotenv (2.7.6)
     erubi (1.10.0)
-    faraday (1.5.0)
+    faraday (1.5.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -96,7 +96,7 @@ GEM
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
     faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     ffi (1.15.3)
     globalid (0.4.2)
@@ -104,10 +104,8 @@ GEM
     hashie (4.1.0)
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
-    io-wait (0.1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
-    json (2.5.1)
     jwt (2.2.3)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -125,12 +123,6 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    net-http (0.1.1)
-      net-protocol
-      uri
-    net-protocol (0.1.1)
-      io-wait
-      timeout
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-linux)
       racc (~> 1.4)
@@ -152,7 +144,6 @@ GEM
     omniauth-rails_csrf_protection (1.0.0)
       actionpack (>= 4.2)
       omniauth (~> 2.0)
-    open-uri (0.1.0)
     public_suffix (4.0.6)
     puma (5.3.2)
       nio4r (~> 2.0)
@@ -225,13 +216,11 @@ GEM
     sqlite3 (1.4.2)
     thor (1.1.0)
     tilt (2.0.10)
-    timeout (0.1.1)
     turbolinks (5.2.1)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
-    uri (0.10.1)
     web-console (4.1.0)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -263,14 +252,10 @@ DEPENDENCIES
   capybara (>= 3.26)
   dotenv
   jbuilder (~> 2.7)
-  json
   listen (~> 3.3)
-  net-http
-  nokogiri
   omniauth
   omniauth-facebook
   omniauth-rails_csrf_protection
-  open-uri
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
   rails (~> 6.1.4)

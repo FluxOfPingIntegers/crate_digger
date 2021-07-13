@@ -29,10 +29,10 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'require_all'
 
 # Web scrape
-gem "open-uri"
-gem "net-http"
-gem "nokogiri"
-gem "json"
+# gem "open-uri"
+# gem "net-http"
+# gem "nokogiri"
+# gem "json"
 
 # Hide keys from github
 gem "dotenv"
