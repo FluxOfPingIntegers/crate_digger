@@ -47,8 +47,11 @@ class ScraperImporter
     zip_response = Net::HTTP.get(url)
     noko_html = Nokogiri::HTML(zip_response)
     # currently if I select an element from this table with:
-    # noko_html.css("statTable").children[3].children[0].content
+    # noko_html.css(".statTable").children[3].children[0].content
     # I will get the first zip code as => "Zip Code 23173"
+    # If I hold on to this as a variable like last_zip I can do last_zip[9..13] and get => "23173"
+    # The last zip code is at: noko_html.css(".statTable").children[51].children[0].content
+    # This is 19 less than: noko_html.css(".statTable").children.size
     puts "complete"
   end
 

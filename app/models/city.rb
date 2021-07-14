@@ -4,4 +4,8 @@ class City < ApplicationRecord
   
   belongs_to :state
   has_many :stores
+
+  def state_abb
+    self.state.abb
+  end
 end
