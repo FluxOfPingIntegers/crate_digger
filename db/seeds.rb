@@ -8,6 +8,4 @@
 StateScraper.create_states
 CityBuilder.create_cities
 
-City.all.each do |city|
-  ZipScraper.city_zip_codes(city)
-end
+City.all.each{|city| ZipScraper.city_zip_codes(city)}

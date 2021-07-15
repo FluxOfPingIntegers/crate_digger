@@ -4,7 +4,7 @@ class CityBuilder
     
     state = State.where(abb: "AL").take
       state.cities.find_or_create_by(name: "Montgomery")
-      state.cities.find_or_create_by(name: "Bermingham")
+      state.cities.find_or_create_by(name: "Birmingham")
     
     state = State.where(abb: "AK").take
       state.cities.find_or_create_by(name: "Juneau")
@@ -111,7 +111,7 @@ class CityBuilder
     
     state = State.where(abb: "MT").take
       state.cities.find_or_create_by(name: "Helena")
-      state.cities.find_or_create_by(name: "Bellings")
+      state.cities.find_or_create_by(name: "Billings")
     
     state = State.where(abb: "NE").take
       state.cities.find_or_create_by(name: "Lincoln")
@@ -120,7 +120,7 @@ class CityBuilder
     state = State.where(abb: "NV").take
       state.cities.find_or_create_by(name: "Carson City")
       state.cities.find_or_create_by(name: "Las Vegas")
-      state.cities.find_or_create_by(name: "Herson")
+      state.cities.find_or_create_by(name: "Henderson")
       state.cities.find_or_create_by(name: "Reno")
       state.cities.find_or_create_by(name: "North Las Vegas")
     
@@ -153,7 +153,7 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Durham")
     
     state = State.where(abb: "ND").take
-      state.cities.find_or_create_by(name: "Bismark")
+      state.cities.find_or_create_by(name: "Bismarck")
       state.cities.find_or_create_by(name: "Fargo")
     
     state = State.where(abb: "OH").take

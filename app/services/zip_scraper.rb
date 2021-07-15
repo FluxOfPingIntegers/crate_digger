@@ -9,12 +9,13 @@ class ZipScraper
     noko_html = Nokogiri::HTML(zip_response)
     last = noko_html.css(".statTable").children.size - 18
     zip_codes = []
-    i = 3
-    while i != last do
-      zip = noko_html.css(".statTable").children[i].children[0].content
+    counter = 3
+    while counter != last do
+#byebug
+      zip = noko_html.css(".statTable").children[counter].children[0].content
       zip = zip[9..13]
       zip_codes << zip
-      i += 1
+      counter += 1
     end
     zip_code_list = zip_codes.join(", ")
     city.update(zip_code_list: zip_code_list)
