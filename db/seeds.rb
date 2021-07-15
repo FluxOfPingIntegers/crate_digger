@@ -7,3 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 StateScraper.create_states
 CityBuilder.create_cities
+
+City.all.each do |city|
+  ZipScraper.city_zip_codes(city)
+end
