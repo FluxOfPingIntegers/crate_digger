@@ -1,0 +1,7 @@
+<h1>Welcom to Crate Digger!</h1>
+
+<%= form_for @user do |f| %>
+  <%= render partial: "layouts/errors", locals: {record: @user} %>
+  <%= f.label :username %><br>
+  <%= f.text_field :username %><br>
+  

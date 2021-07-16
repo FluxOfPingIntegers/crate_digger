@@ -25,3 +25,9 @@ nav {
     padding: 0;
     text-align: center;
 }
+
+div.form {
+    margin: auto;
+    padding-top: 20px;
+    text-align: center;
+}
