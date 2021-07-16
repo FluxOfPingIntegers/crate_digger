@@ -7,4 +7,6 @@ class Store < ApplicationRecord
   has_many :users, through: :comments
   has_many :reviews
   has_many :users, through: :reviews
+
+  scope :exists_from_yelp?, -> { where("yelp_id LIKE ?", "%#{id}%").present? }
 end
