@@ -1,6 +1,7 @@
 class Store < ApplicationRecord
   validates :name, presence: true
   validates :city_id, presence: true
+  validates :yelp_id, presence: true, uniqueness: true
   
   belongs_to :city
   has_many :comments
