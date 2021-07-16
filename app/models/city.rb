@@ -5,6 +5,8 @@ class City < ApplicationRecord
   belongs_to :state
   has_many :stores
 
+  scope :search_zip, -> (zip){where("zip_code_list LIKE ?", "%#{zip},%") }
+
   def state_abb
     self.state.abb
   end
