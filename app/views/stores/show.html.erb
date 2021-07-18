@@ -1,2 +1,11 @@
-<h1>Stores#show</h1>
-<p>Find me in app/views/stores/show.html.erb</p>
+<h1><%= @store.name %></h1>
+<div class="img">
+  <%= image_tag(@store.web) %>
+</div>
+<div class="list-no-bullets">
+<ul>
+  <li><%= @store.full_address %></li>
+  <li>Phone: <%= @store.phone %></li>
+  <li>Website: <%= link_to @store.name, @store.web %></li>
+</ul>
+</div>

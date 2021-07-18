@@ -35,3 +35,8 @@ div.form {
 div.list {
   list-style-position: inside;
 }
+
+div.list-no-bullets {
+  list-style-position: inside;
+  list-style-type: none;
+}

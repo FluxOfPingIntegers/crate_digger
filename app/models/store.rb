@@ -11,4 +11,7 @@ class Store < ApplicationRecord
 
   scope :search_by_yelp_id, -> (id){ where("yelp_id LIKE ?", "%#{id}%") }
 
+  def full_address
+    "#{self.address}, #{self.city.name}, #{self.city.state_abb}, #{self.zip_code}"
+  end
 end
