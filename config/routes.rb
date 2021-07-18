@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   
   resources :states, only: [:index]
-  
+  post "states", to: "state#search", as: :state_search
   resources :states, only: [:show] do
     resources :cities, only: [:index, :show]
   end
