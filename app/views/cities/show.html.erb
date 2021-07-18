@@ -1,2 +1,9 @@
-<h1>Cities#show</h1>
-<p>Find me in app/views/cities/show.html.erb</p>
+<h1><%= @city.name %> - <%= link_to @city.state_abb, @city.state %></h1>
+<p>We have found the following record stores in this city:</p>
+<div class="list">
+<ul>
+  <% @city.stores.each do |store| %>
+  <li><%= link_to store.name, store %></li>
+  <% end %>
+</ul>
+</div>
