@@ -1,2 +1,10 @@
-<h1>Cities#index</h1>
-<p>Find me in app/views/cities/index.html.erb</p>
+<h1><%= @state.name%> - <%= @state.abb %></h1>
+<h3>We have record store listings for the following cities:</h3>
+<div class="list">
+<ul>
+  <% @state.cities.each do |city| %>
+  <li><%= link_to city.name, state_city_path(@state, city) %></li>
+  <%= city.stores.count %> stores listed<br>
+  <% end %>
+</ul>
+</div>
