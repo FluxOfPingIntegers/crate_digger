@@ -1,6 +1,6 @@
 class CitiesController < ApplicationController
   def index
-    @state = params[:state_id]
+    @state = State.find(params[:state_id])
   end
 
   def show
