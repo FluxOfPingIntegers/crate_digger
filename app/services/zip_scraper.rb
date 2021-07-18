@@ -11,7 +11,6 @@ class ZipScraper
     zip_codes = []
     counter = 3
     while counter != last do
-#byebug
       zip = noko_html.css(".statTable").children[counter].children[0].content
       zip = zip[9..13]
       zip_codes << zip

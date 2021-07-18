@@ -10,4 +10,5 @@ class Store < ApplicationRecord
   has_many :users, through: :reviews
 
   scope :search_by_yelp_id, -> (id){ where("yelp_id LIKE ?", "%#{id}%") }
+
 end

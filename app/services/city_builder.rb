@@ -7,7 +7,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Birmingham")
     
     state = State.where(abb: "AK").take
-      state.cities.find_or_create_by(name: "Juneau")
       state.cities.find_or_create_by(name: "Anchorage")
     
     state = State.where(abb: "AZ").take
@@ -34,11 +33,10 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Colorado Springs")
     
     state = State.where(abb: "CT").take
-      state.cities.find_or_create_by(name: "Hartford")
       state.cities.find_or_create_by(name: "Bridgeport")
     
     state = State.where(abb: "DE").take
-      state.cities.find_or_create_by(name: "Dover")
+      state.cities.find_or_create_by(name: "Wilmington")
     
     state = State.where(abb: "FL").take
       state.cities.find_or_create_by(name: "Tallahassee")
@@ -56,9 +54,7 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Boise")
     
     state = State.where(abb: "IL").take
-      state.cities.find_or_create_by(name: "Springfield")
       state.cities.find_or_create_by(name: "Chicago")
-      state.cities.find_or_create_by(name: "Aurora")
     
     state = State.where(abb: "IN").take
       state.cities.find_or_create_by(name: "Indianapolis")
@@ -73,7 +69,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Kansas City")
     
     state = State.where(abb: "KY").take
-      state.cities.find_or_create_by(name: "Frankfort")
       state.cities.find_or_create_by(name: "Louisville")
     
     state = State.where(abb: "LA").take
@@ -81,7 +76,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "New Orleans")
     
     state = State.where(abb: "ME").take
-      state.cities.find_or_create_by(name: "Augusta")
       state.cities.find_or_create_by(name: "Portland")
     
     state = State.where(abb: "MD").take
@@ -91,7 +85,6 @@ class CityBuilder
     state = State.where(abb: "MA").take
       state.cities.find_or_create_by(name: "Boston")
       state.cities.find_or_create_by(name: "Worcester")
-      state.cities.find_or_create_by(name: "Springfield")
     
     state = State.where(abb: "MI").take
       state.cities.find_or_create_by(name: "Lansing")
@@ -105,7 +98,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Jackson")
     
     state = State.where(abb: "MO").take
-      state.cities.find_or_create_by(name: "Jefferson City")
       state.cities.find_or_create_by(name: "Kansas City")
       state.cities.find_or_create_by(name: "Saint Louis")
     
@@ -114,7 +106,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Billings")
     
     state = State.where(abb: "NE").take
-      state.cities.find_or_create_by(name: "Lincoln")
       state.cities.find_or_create_by(name: "Omaha")
     
     state = State.where(abb: "NV").take
@@ -122,15 +113,11 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Las Vegas")
       state.cities.find_or_create_by(name: "Henderson")
       state.cities.find_or_create_by(name: "Reno")
-      state.cities.find_or_create_by(name: "North Las Vegas")
     
     state = State.where(abb: "NH").take
-      state.cities.find_or_create_by(name: "Concord")
       state.cities.find_or_create_by(name: "Manchester")
     
     state = State.where(abb: "NJ").take
-      state.cities.find_or_create_by(name: "Trenton")
-      state.cities.find_or_create_by(name: "Newark")
       state.cities.find_or_create_by(name: "Jersey City")
     
     state = State.where(abb: "NM").take
@@ -166,7 +153,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Tulsa")
     
     state = State.where(abb: "OR").take
-      state.cities.find_or_create_by(name: "Salem")
       state.cities.find_or_create_by(name: "Portland")
     
     state = State.where(abb: "PA").take
@@ -182,7 +168,6 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Columbia")
     
     state = State.where(abb: "SD").take
-      state.cities.find_or_create_by(name: "Pierre")
       state.cities.find_or_create_by(name: "Sioux Falls")
     
     state = State.where(abb: "TN").take
@@ -216,6 +201,7 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Alexandria")
       state.cities.find_or_create_by(name: "Hampton")
       state.cities.find_or_create_by(name: "Roanoke")
+      state.cities.find_or_create_by(name: "Charlottesvile")
     
     state = State.where(abb: "WA").take
       state.cities.find_or_create_by(name: "Olympia")
@@ -225,7 +211,6 @@ class CityBuilder
     
     state = State.where(abb: "WV").take
       state.cities.find_or_create_by(name: "Charleston")
-      state.cities.find_or_create_by(name: "Huntington")
     
     state = State.where(abb: "WI").take
       state.cities.find_or_create_by(name: "Madison")

@@ -9,3 +9,9 @@ StateScraper.create_states
 CityBuilder.create_cities
 
 City.all.each{|city| ZipScraper.city_zip_codes(city)}
+
+State.first_city_pop_for("DE")
+State.first_city_pop_for("ME")
+State.first_city_pop_for("MS")
+State.first_city_pop_for("SC")
+State.first_city_pop_for("WV")
