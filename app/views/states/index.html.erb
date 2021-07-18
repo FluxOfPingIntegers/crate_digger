@@ -4,7 +4,7 @@
 <ul>
   <% @states.each do |state| %>
     <li><%= link_to "#{state.name} - #{state.abb}", state_cities_path(state) %></li>
-    <%= state.cities.count %> cities listed.<br>
+    <%= city_count_for(state) %><br>
   <% end %>
 </ul>
 </div>
