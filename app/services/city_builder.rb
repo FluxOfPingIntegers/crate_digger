@@ -201,7 +201,7 @@ class CityBuilder
       state.cities.find_or_create_by(name: "Alexandria")
       state.cities.find_or_create_by(name: "Hampton")
       state.cities.find_or_create_by(name: "Roanoke")
-      state.cities.find_or_create_by(name: "Charlottesvile")
+      state.cities.find_or_create_by(name: "Charlottesville")
     
     state = State.where(abb: "WA").take
       state.cities.find_or_create_by(name: "Olympia")

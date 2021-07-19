@@ -9,6 +9,7 @@ StateScraper.create_states
 CityBuilder.create_cities
 
 City.all.each{|city| ZipScraper.city_zip_codes(city)}
+City.all.each{|city| YelpApi.search(city.name)}
 
 State.first_city_pop_for("DE")
 State.first_city_pop_for("ME")

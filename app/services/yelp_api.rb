@@ -25,9 +25,11 @@ class YelpApi
           web: business["url"],
           address: business["location"]["display_address"][0],
           phone: business["display_phone"],
-          zip_code: business["location"]["zip_code"],
-          parse_hours: business["hours"][0]["open"]          
+          zip_code: business["location"]["zip_code"],         
         }
+        if !!business["hours"]
+          store_params[:parse_hours] = business["hours"][0]["open"]
+        end
         city.stores.find_or_create_by(store_params)
       end
     end
@@ -56,9 +58,11 @@ class YelpApi
             address: business["location"]["display_address"][0],
             phone: business["display_phone"],
             zip_code: business["location"]["zip_code"],
-            parse_hours: business["hours"][0]["open"]
           }
-          city.stores.find_or_create_by(store_params)
+          if !!business["hours"]
+            store_params[:parse_hours] = business["hours"][0]["open"]
+          end
+            city.stores.find_or_create_by(store_params)
         end
       end
     end

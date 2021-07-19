@@ -42,6 +42,10 @@ class Store < ApplicationRecord
   end
 
   def full_hours
-    self.hours.split(";")
+    if !self.hours.nil?
+      self.hours.split(";")
+    else
+      ["Hours are unlisted"]
+    end
   end
 end
