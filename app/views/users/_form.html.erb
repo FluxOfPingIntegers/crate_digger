@@ -14,5 +14,8 @@
   <%= f.submit "Submit!" %><br>
   <% end %>
 </div>
-<div class="oauth-form">
-<p>Or Login with <%= link_to "Facebook", '/auth/facebook', method: :post %>
+<% if !logged_in? %>
+  <div class="oauth-form">
+    <p>Or Login with <%= link_to "Facebook", '/auth/facebook', method: :post %>
+  </div>
+<% end %>

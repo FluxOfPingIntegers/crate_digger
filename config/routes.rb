@@ -4,9 +4,11 @@ Rails.application.routes.draw do
   
   get "login", to: "static#login", as: :login
   
-  post "sessions", to: "session#create", as: :new_session # needs testing
+  post "sessions", to: "session#create", as: :new_session
   
-  delete "sessions", to: "session#destroy", as: :logout # needs testing
+  delete "sessions", to: "session#destroy", as: :logout
+
+  get "/auth/facebook/callback", to: "users#facebook"
   
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   
