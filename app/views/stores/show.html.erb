@@ -13,3 +13,12 @@
   <% end %>
 </ul>
 </div>
+<% if logged_in? %>
+  <%= form_for @comment do |f| %>
+    <%= render partial: "layouts/errors", locals: {record: @comment} %>
+    <%= f.label :content %>
+    <%= f.text_area :content %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
+

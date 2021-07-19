@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   end
 
   def create
+    byebug
   end
 
   def index
