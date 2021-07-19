@@ -7,5 +7,9 @@
   <li><%= @store.full_address %></li>
   <li>Phone: <%= @store.phone %></li>
   <li>Website: <%= link_to @store.name, @store.web %></li>
+  <p>Hours:</p>
+  <% @store.full_hours.each do |day| %>
+  <li><%= day %></li>
+  <% end %>
 </ul>
 </div>

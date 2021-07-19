@@ -69,29 +69,30 @@ class YelpApi
   end
 
   def self.update_store(store)
-    stores_yelp_id = store.yelp_id
-    url = URI("https://api.yelp.com/v3/businesses/#{stores_yelp_id}")
-    https = Net::HTTP.new(url.host, url.port)
-    https.use_ssl = true
-    
-    request = Net::HTTP::Get.new(url)
-    request["Authorization"] = "Bearer #{ENV['YELP_KEY']}"
-    response = https.request(request)
-    results = JSON.parse(response.body)
-    store_params = {
-      yelp_id: results["id"],
-      name: results["name"],
-      img: results["image_url"],
-      web: results["url"],
-      address: results["location"]["display_address"][0],
-      phone: results["display_phone"],
-      zip_code: results["location"]["zip_code"]
-    }
-    if !!results["hours"][0]["open"]
-      store_params[:parse_hours] = results["hours"][0]["open"]
+    if Time.now.httpdate.to_date > store.updated_at.to_date
+      stores_yelp_id = store.yelp_id
+      url = URI("https://api.yelp.com/v3/businesses/#{stores_yelp_id}")
+      https = Net::HTTP.new(url.host, url.port)
+      https.use_ssl = true
+      
+      request = Net::HTTP::Get.new(url)
+      request["Authorization"] = "Bearer #{ENV['YELP_KEY']}"
+      response = https.request(request)
+      results = JSON.parse(response.body)
+      store_params = {
+        yelp_id: results["id"],
+        name: results["name"],
+        img: results["image_url"],
+        web: results["url"],
+        address: results["location"]["display_address"][0],
+        phone: results["display_phone"],
+        zip_code: results["location"]["zip_code"]
+      }
+      if !!results["hours"][0]["open"]
+        store_params[:parse_hours] = results["hours"][0]["open"]
+      end
+      store.update(store_params)
     end
-    store.update(store_params)
-
   end
 
 end
