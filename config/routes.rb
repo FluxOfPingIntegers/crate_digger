@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
   
   resources :stores, only: [:show] do
-    resources :comments, only: [:new, :create, :edit, :update, :destroy]
+    resources :comments, only: [:create], as: :comments
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

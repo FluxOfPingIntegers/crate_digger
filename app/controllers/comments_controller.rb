@@ -1,20 +1,17 @@
 class CommentsController < ApplicationController
-  def new
-  end
 
   def create
-    byebug
-  end
-
-  def index
-  end
-
-  def edit
-  end
-
-  def update
+    @comment = current_user.comments.new(store_id: params[:store_id], content: params[:comment][:content])
+    @store = Store.find(params[:store_id])
+    if @comment.valid?
+      comment.save
+      redirect_to store_path(@store)
+    else
+      render :template => "stores/show"
+    end
   end
 
   def destroy
   end
+
 end

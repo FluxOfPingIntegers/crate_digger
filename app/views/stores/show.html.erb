@@ -14,11 +14,18 @@
 </ul>
 </div>
 <% if logged_in? %>
-  <%= form_for @comment do |f| %>
+  <%= form_for [@store, @comment] do |f| %>
+    <%= f.label :content %><br>
     <%= render partial: "layouts/errors", locals: {record: @comment} %>
-    <%= f.label :content %>
-    <%= f.text_area :content %>
+    <%= f.text_area :content %><br>
     <%= f.submit %>
   <% end %>
 <% end %>
-
+<div class="comments">
+<ul>
+<% @store.comments.each do |comment| %>
+  <li><%= comment.user.username %> Wrote:<br>
+  <%= comment.content %></li>
+<% end %>
+</ul>
+</div>
