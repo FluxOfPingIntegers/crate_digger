@@ -28,12 +28,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Use require_all to use utility classes in different folders like web scraping and api interfaces
 gem 'require_all'
 
-# Web scrape
-# gem "open-uri"
-# gem "net-http"
-# gem "nokogiri"
-# gem "json"
-
 # Hide keys from github
 gem "dotenv"
 
@@ -41,6 +35,9 @@ gem "dotenv"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-rails_csrf_protection"
+
+# thin
+gem "thin"
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
