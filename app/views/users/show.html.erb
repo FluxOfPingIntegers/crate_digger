@@ -1,7 +1,9 @@
-<h1>Hello, <% @user.username %></h1>
+<h1>Hello <%= @user.username %></h1>
 <h3>Here is your current information:</h3>
+<div class="list">
 <ul>
   <li>Name: <%= @user.name %></li>
   <li>Email: <%= @user.email %></li>
 </ul>
+</div>
 <p>Click <%= link_to "here", edit_user_path(@user)%> to edit your information.</p>

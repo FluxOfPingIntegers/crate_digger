@@ -16,6 +16,6 @@
 </div>
 <% if !logged_in? %>
   <div class="oauth-form">
-    <p>Or Login with <%= link_to "Facebook", '/auth/facebook', method: :post %>
+    <p>Or Login with <%= link_to('Facebook', '/auth/facebook') %>
   </div>
 <% end %>
