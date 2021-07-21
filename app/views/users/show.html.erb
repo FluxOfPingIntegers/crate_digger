@@ -5,11 +5,12 @@
   <li>Name: <%= @user.name %></li>
   <li>Email: <%= @user.email %></li>
 </ul>
-</div>
 <p>Click <%= link_to "here", edit_user_path(@user)%> to edit your information.</p>
+<p>You have made the following comments on the following stores:</p>
 <ul>
   <% @user.comments.each do |comment| %>
-    <li>On <%= comment.store.name %> You Wrote:<br>
-    <%= comment.content %></li>
+    <li>On <%= link_to comment.store.name, comment.store %> You Wrote:<br>
+    <strong><%= comment.content %></strong></li><br>
   <% end %>
 </ul>
+</div>

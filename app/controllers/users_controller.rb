@@ -17,20 +17,7 @@ class UsersController < ApplicationController
   end
 
   def google
-    user = User.find_by(oauth: auth['uid'])
-    if !!user
-      session[:user_id] = user.id
-      redirect_to user_path(user)
-    else
-      user = User.create(oath: auth['uid']) do |u|
-        u.username = auth['info']['name']
-        u.name = auth['info']['name']
-        u.email = auth['info']['email']
-        u.img = auth['info']['image']
-      end
-      session[:user_id] = user.id
-      redirect_to user_path(user)
-    end
+byebug
   end
 
 
