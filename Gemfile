@@ -32,9 +32,9 @@ gem 'require_all'
 gem "dotenv"
 
 # Omniauth
-#gem "omniauth"
+gem "omniauth"
 #gem "omniauth-facebook"
-#gem "omniauth-rails_csrf_protection"
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-google-oauth2'
 
 # thin

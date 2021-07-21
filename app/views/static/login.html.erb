@@ -10,7 +10,7 @@
   </div>
 
   <div class="oauth-form">
-    <p>Or Login with <%= link_to "Facebook", '/auth/facebook', method: :post %>
+    <p>Or Login with <%= link_to "Google", auth_google_oauth2_callback_path %>
   </div>
   <% else %>
   <p>You currently are logged in as <%= current_user.username %></p>

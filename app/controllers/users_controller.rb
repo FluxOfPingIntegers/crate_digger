@@ -16,7 +16,7 @@ class UsersController < ApplicationController
     end
   end
 
-  def facebook
+  def google
     user = User.find_by(oauth: auth['uid'])
     if !!user
       session[:user_id] = user.id
