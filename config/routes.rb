@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   
   delete "sessions", to: "session#destroy", as: :logout
 
-  get "/auth/facebook/callback", to: "users#facebook"
+  post "/auth/facebook/callback", to: "users#facebook"
   
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   

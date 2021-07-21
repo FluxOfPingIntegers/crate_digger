@@ -88,7 +88,7 @@ class YelpApi
         phone: results["display_phone"],
         zip_code: results["location"]["zip_code"]
       }
-      if !!results["hours"][0]["open"]
+      if !!results["hours"]
         store_params[:parse_hours] = results["hours"][0]["open"]
       end
       store.update(store_params)

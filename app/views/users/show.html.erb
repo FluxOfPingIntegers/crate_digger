@@ -7,3 +7,9 @@
 </ul>
 </div>
 <p>Click <%= link_to "here", edit_user_path(@user)%> to edit your information.</p>
+<ul>
+  <% @user.comments.each do |comment| %>
+    <li>On <%= comment.store.name %> You Wrote:<br>
+    <%= comment.content %></li>
+  <% end %>
+</ul>
