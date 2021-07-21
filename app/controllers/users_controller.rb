@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: :facebook
+  before_action :signed_in, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  
 
   def new
     @user = User.new
@@ -16,17 +18,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def google
-byebug
-  end
-
-
   def show
-    @user = User.find(params[:id])
+
   end
 
   def edit
-    @user = User.find(params[:id])
+
   end
 
   def update
@@ -44,4 +41,6 @@ byebug
   def auth
     request.env['omniauth.auth']
   end
+
+
 end

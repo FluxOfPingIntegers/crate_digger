@@ -15,6 +15,11 @@ class SessionController < ApplicationController
     end
   end
 
+  
+  def google
+    byebug
+  end
+
   def destroy
     session.clear
     redirect_to root_path
