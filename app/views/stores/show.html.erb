@@ -24,8 +24,11 @@
 <div class="comments">
 <ul>
 <% @store.comments.each do |comment| %>
-  <li><%= comment.user.username %> Wrote:<br>
-  <%= comment.content %></li><br>
+  <li><strong><%= comment.user.username %></strong> Wrote:<br>
+  <%= comment.content %><br>
+  <% if comment.user == current_user %>
+  Click <%= link_to "here", edit_user_comment_path(comment.user, comment) %> to edit this comment</li><br>
+  <% end %>
 <% end %>
 </ul>
 </div>

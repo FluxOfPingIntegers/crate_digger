@@ -26,8 +26,9 @@ class CommentsController < ApplicationController
   private
 
   def verify_comment
-    if current_user == User.find(params[:user_id])
-      @comment = Comment.find(params[:id])
+    comment = Comment.find(params[:id])
+    if current_user == User.find(params[:user_id]) && current_user == comment.user
+        @comment = comment
     else
       flash[:errors] = "Action was not authorized"
       redirect_to root_path

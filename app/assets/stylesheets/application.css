@@ -40,3 +40,7 @@ div.list-no-bullets {
   list-style-position: inside;
   list-style-type: none;
 }
+
+div.comments {
+  list-style-position: inside;
+}

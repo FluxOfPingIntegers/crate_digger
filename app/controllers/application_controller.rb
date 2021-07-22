@@ -12,12 +12,6 @@ class ApplicationController < ActionController::Base
       !!current_user
     end
 
-    def signed_in
-      if !logged_in?
-        redirect_to login_path
-      end
-    end
-
     def set_user
       if current_user == User.find(params[:id])
         @user = current_user
