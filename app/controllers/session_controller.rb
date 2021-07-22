@@ -17,7 +17,18 @@ class SessionController < ApplicationController
 
   
   def google
-    byebug
+    if !!request.env['omniauth.auth']
+      user = User.find_or_create_by(email: request.env['omniauth.auth']["info"]["email"]) do |user|
+        user.username = request.env['omniauth.auth']["info"]["name"]
+        user.name = request.env['omniauth.auth']["info"]["name"]
+        user.email = request.env['omniauth.auth']["info"]["unverified_email"]
+        user.password = request.env['omniauth.auth']["info"]["unverified_email"]
+        user.img = request.env['omniauth.auth']["info"]["image"]
+        user.oauth = request.env['omniauth.auth']["uid"]
+      end
+    session[:user_id] = user.id
+    redirect_to user_path(user)
+    end
   end
 
   def destroy

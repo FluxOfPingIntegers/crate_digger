@@ -22,6 +22,7 @@ class ApplicationController < ActionController::Base
       if current_user == User.find(params[:id])
         @user = current_user
       else
+        flash[:errors] = "Action was not authorized"
         redirect_to root_path
       end
     end

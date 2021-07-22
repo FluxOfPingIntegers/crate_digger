@@ -29,7 +29,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'require_all'
 
 # Hide keys from github
-gem "dotenv"
+gem "dotenv-rails"
 
 # Omniauth
 # gem "omniauth"

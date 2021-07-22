@@ -1,2 +1,8 @@
-<p>Hello from Crate Digger!</p>
+<div class="errors">
+<% flash.each do |type, msg| %>
+  <p><%= msg %></p>
+<% end %>
+</div>
+
+<h1>Hello from Crate Digger!</h1>
 <%= link_to "Select a State", states_path %>
