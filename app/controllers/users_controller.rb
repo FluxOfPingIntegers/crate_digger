@@ -26,9 +26,18 @@ class UsersController < ApplicationController
   end
 
   def update
+    if @user.update(user_params)
+      redirect_to @user
+    else
+      render :edit
+    end
   end
 
   def destroy
+    session.clear
+    @user.comments.destroy_all
+    @user.destroy
+    redirect_to root_path
   end
 
   private

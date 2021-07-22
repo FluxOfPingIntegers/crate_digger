@@ -24,10 +24,12 @@
 <div class="comments">
 <ul>
 <% @store.comments.each do |comment| %>
-  <li><strong><%= comment.user.username %></strong> Wrote:<br>
-  <%= comment.content %><br>
-  <% if comment.user == current_user %>
-  Click <%= link_to "here", edit_user_comment_path(comment.user, comment) %> to edit this comment</li><br>
+  <% if comment.valid? %>
+    <li><strong><%= comment.user.username %></strong> Wrote:<br>
+    <%= comment.content %><br>
+    <% if comment.user == current_user %>
+    Click <%= link_to "here", edit_user_comment_path(comment.user, comment) %> to edit this comment</li><br>
+    <% end %>
   <% end %>
 <% end %>
 </ul>

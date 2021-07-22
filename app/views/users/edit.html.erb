@@ -1,3 +1,5 @@
 <h1>Edit Your Information</h1>
 
 <%= render partial: "form", locals: {user: @user} %>
+<br>
+<p>If you would like to <strong>DELETE</strong> your account, click <%= link_to("here", user_path(@user), method: :delete)%></p>
