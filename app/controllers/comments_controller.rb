@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :verify_comment, only: [:edit, :update, :destroy]
+  before_action :verify_comment, only: [:edit, :update]
 
   def create
     @comment = current_user.comments.new(store_id: params[:store_id], content: params[:comment][:content])
@@ -17,10 +17,18 @@ class CommentsController < ApplicationController
   end
 
   def update
-
+    if @comment.update(comment_params)
+      redirect_to store_path(@comment.store)
+    else
+      render :edit
+    end
   end
 
   def destroy
+    comment = Comment.find(params[:id])
+    store = comment.store
+    comment.destroy
+    redirect_to store_path(store)    
   end
 
   private
@@ -33,6 +41,10 @@ class CommentsController < ApplicationController
       flash[:errors] = "Action was not authorized"
       redirect_to root_path
     end
+  end
+
+  def comment_params
+    params.require(:comment).permit(:content)
   end
 
 end
