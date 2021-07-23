@@ -13,17 +13,47 @@
  *= require_tree .
  *= require_self
  */
+@font-face {
+  font-family: "PermanentMarker-Regular";
+  src: url('PermanentMarker-Regular.ttf') format("truetype");
+}
+
 body {
     margin: auto;
     text-align: center;
     font-family: serif;
     font-size: 25px;
+    color: black;
+
+    height: 100vh;
+    width: 100vh;
+    position: static;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50%, 50%;
+    background-image: url("background records-1200x795.jpg"); 
 }
 
 nav {
     margin: auto;
     padding: 0;
     text-align: center;
+    font-family: "PermanentMarker-Regular";
+    font-size: 27px;
+    background-color: rgba(175, 147, 35, 1);
+}
+
+nav a {
+  color: blue;
+}
+
+a {
+  color: red;
+}
+
+div.pages {
+  background-color: rgba(254, 254, 223, 0.822);
 }
 
 div.form {
