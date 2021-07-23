@@ -6,7 +6,13 @@ Current build status: Under development
 
 Getting Started
 
-Step 1: .....NEEDS CONTENT....
+Step 1: At the top of the screen click the "SignUp" option if you don't already have an account. follow the prompts for creating an account
+
+Step 2: Select the State in which the city you would like to view the record stores for resides.
+
+Step 3: Select the city you would like to view record stores for
+
+Step 4: Pick from the stores listed to view information about them and create/read comments!  Have fun :)
 
 Installation
 
@@ -14,11 +20,18 @@ First You will need developer software, I used Visual Studio Code. Depending on 
 
 Second You will need a Ruby library on your machine. Within terminal please follow the instructions found here: https://stackify.com/install-ruby-on-ubuntu-everything-you-need-to-get-going/
 
-Third You will need to clone the repo for this software and pull it up in VS Code. In your terminal please navigate to the folder you would like the files for this software to be and type "git clone git@github.com:FluxOfPingIntegers/crate_digger.git" then "cd crate_digger" then "code .".  From there you will need to ...NEED CONTENT ON YELP API INFO...
+Third You will need to clone the repo for this software and pull it up in VS Code. In your terminal please navigate to the folder you would like the files for this software to be and type "git clone git@github.com:FluxOfPingIntegers/crate_digger.git" then "cd crate_digger" then "code .".
+
+Forth Please follow the instructions for the rails-dotenv gem you will use to hide your yelp and google id/keys: https://github.com/bkeepers/dotenv
+
+Fifth you will need to register your app with the Yelp API (documentation: https://www.yelp.com/developers/documentation/v3/get_started)
+
+Sixth you will need to register your app with Google in order to allow users to sign in via their google accounts: https://console.developers.google.com/
 
 Finally you are ready to proceed to the Getting Started section of this README
 
-Contribute This is a project I am building for school (and for fun) and I am not currently looking for contributors. This may change in the future though!
+Contribute
+ This is a project I am building for school (and for fun) and I am not currently looking for contributors. This may change in the future though!
 
 Author
 
