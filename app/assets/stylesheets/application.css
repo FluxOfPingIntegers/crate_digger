@@ -54,6 +54,8 @@ a {
 
 div.pages {
   background-color: rgba(254, 254, 223, 0.822);
+  position: sticky;
+  min-height: 91vh;
 }
 
 div.form {
