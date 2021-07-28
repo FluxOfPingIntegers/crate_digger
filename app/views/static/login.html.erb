@@ -1,4 +1,9 @@
 <% if !logged_in? %>
+  <div class="errors">
+  <% flash.each do |type, msg| %>
+    <p><em><%= msg.first %></em></p>
+  <% end %>
+  </div>
   <div class="form">
   <%= form_tag new_session_path do %>
     <%= label_tag :username %>

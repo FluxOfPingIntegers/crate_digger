@@ -14,9 +14,10 @@
 </ul>
 </div>
 <% if logged_in? %>
+  <p>Comment on this store below!</p>
   <%= form_for [@store, @comment] do |f| %>
-    <%= f.label :content %><br>
     <%= render partial: "layouts/errors", locals: {record: @comment} %>
+    <%= f.label :content %><br>
     <%= f.text_area :content %><br>
     <%= f.submit %>
   <% end %>

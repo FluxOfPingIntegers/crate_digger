@@ -76,3 +76,13 @@ div.list-no-bullets {
 div.comments {
   list-style-position: inside;
 }
+
+div.errors {
+  color: red;
+}
+
+ul.errors {
+  color: red;
+  list-style-position: inside;
+  list-style-type: none;
+}
