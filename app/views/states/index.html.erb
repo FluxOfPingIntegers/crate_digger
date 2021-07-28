@@ -2,7 +2,7 @@
 
 <div class="list">
 <ul>
-  <% @states.each do |state| %>
+  <% @states.order("name ASC").each do |state| %>
     <li><%= link_to "#{state.name} - #{state.abb}", state_cities_path(state) %></li>
     <%= city_count_for(state) %><br>
   <% end %>

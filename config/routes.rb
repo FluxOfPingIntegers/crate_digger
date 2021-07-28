@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   
   delete "sessions", to: "session#destroy", as: :logout
 
-  # post "/auth/facebook/callback", to: "users#facebook"
-  get "/auth/google_oauth2/callback", to: "session#google" # needs configuring
+
+  get "/auth/google_oauth2/callback", to: "session#google"
   
   resources :users, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :users, only: [:show] do
