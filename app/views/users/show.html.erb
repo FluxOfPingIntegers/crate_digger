@@ -6,7 +6,7 @@
   <li>Email: <%= @user.email %></li>
 </ul>
 <% if !!current_user.oauth %>
-<p>Note: If Google was used as your initial signin, <strong>your default password is your email address</strong></p>
+<p>Note: If Google was used as your initial signin, <strong>please create a new password</strong></p>
 <% end %>
 <p>Click <%= link_to "here", edit_user_path(@user)%> to edit your information.</p>
 <p>You have made the following comments on the following stores:</p>
