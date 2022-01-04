@@ -34,7 +34,8 @@ class SessionController < ApplicationController
         user.username = "#{request.env['omniauth.auth']["info"]["first_name"]}-#{SecureRandom.hex(3)}"
         user.name = request.env['omniauth.auth']["info"]["name"]
         user.email = request.env['omniauth.auth']["info"]["unverified_email"]
-        user.password = request.env['omniauth.auth']["info"]["unverified_email"]
+        user.password = "#{request.env['omniauth.auth']["info"]["unverified_email"]}#{SecureRandom.hex(3)}"
+        #user.password = request.env['omniauth.auth']["info"]["unverified_email"]
         user.img = request.env['omniauth.auth']["info"]["image"]
         user.oauth = request.env['omniauth.auth']["uid"]
       end
