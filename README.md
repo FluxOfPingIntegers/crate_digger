@@ -2,7 +2,7 @@
 
 This is a record store locating rails app I am making as part of my phase 3 project for Flatiron school.  It utilizes the yelp API and will list record stores for different locations.
 
-### Current build status: Under development
+### Current build status: Finished
 
 ## Getting Started
 
